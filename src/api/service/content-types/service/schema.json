@@ -26,11 +26,14 @@
     },
     "customer_id": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::profile.profile"
+      "relation": "manyToOne",
+      "target": "api::profile.profile",
+      "inversedBy": "services"
     },
     "category": {
-      "type": "string"
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
     }
   }
 }

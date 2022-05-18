@@ -25,12 +25,19 @@
     "customer": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::customer.customer"
+      "target": "api::customer.customer",
+      "inversedBy": "profile"
     },
     "category": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service",
+      "mappedBy": "customer_id"
     }
   }
 }

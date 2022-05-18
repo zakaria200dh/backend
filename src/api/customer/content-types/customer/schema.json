@@ -41,6 +41,12 @@
     },
     "date_of_birth": {
       "type": "date"
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profile.profile",
+      "mappedBy": "customer"
     }
   }
 }
